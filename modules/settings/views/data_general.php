@@ -79,7 +79,7 @@ foreach($general->result() as $key => $val){
   <!-- Auto numeric -->
 <script type='text/javascript' src="<?php echo base_url(); ?>addon/autonumeric/autoNumeric.js"></script>
 <!-- Datepicker -->
-<script type='text/javascript' src="<?php echo base_url(); ?>assets/js/datepicker/daterangepicker.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/js/datepicker/daterangepicker.js"></script>
 <!-- Select 2 -->
 <script type='text/javascript' src="<?php echo base_url(); ?>assets/js/select/select2.full.js"></script>
  <script type="text/javascript">
