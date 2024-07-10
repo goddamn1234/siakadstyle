@@ -167,7 +167,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- Datepicker -->
 <script src="https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/js/datepicker/daterangepicker.js"></script>
 <!-- Select 2 -->
-<script type='text/javascript' src="<?php echo base_url(); ?>assets/js/select/select2.full.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/js/select/select2.full.js"></script>
  <script type="text/javascript">
 $(document).ready(function() {
 	$("#role").focus(function(){
