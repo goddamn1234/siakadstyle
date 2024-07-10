@@ -579,11 +579,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="http://cdnjs.cloudflare.com/ajax/libs/screenfull.js/2.0.0/screenfull.min.js"></script>
 
     <!-- Metis core scripts -->
-    <script src="assets/js/core.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/js/core.min.js"></script>
 
     <!-- Metis demo scripts -->
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/style-switcher.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/js/style-switcher.min.js"></script>
   </body>
 </html>
 
