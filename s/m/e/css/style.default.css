@@ -1,23 +1,23 @@
 /* Font face for Open Sans */
 @font-face {
     font-family: 'Open Sans';
-    src: url('https://raw.githubusercontent.com/goddamn1234/siakadstyle/main/s/m/e/fonts/OpenSans.ttf') format('truetype');
+    src: url('https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/main/s/m/e/fonts/OpenSans.ttf') format('truetype');
     /* Add other font formats (e.g., woff, woff2) if needed */
     font-weight: normal;
     font-style: normal;
 }
-@import url('https://raw.githubusercontent.com/goddamn1234/siakadstyle/main/s/m/e/css/plugins/jquery.alerts.css');
-@import url('https://raw.githubusercontent.com/goddamn1234/siakadstyle/main/s/m/e/css/plugins/uniform.tp.css');
-@import url('https://raw.githubusercontent.com/goddamn1234/siakadstyle/main/s/m/e/css/plugins/jquery.ui.css');
-@import url('https://raw.githubusercontent.com/goddamn1234/siakadstyle/main/s/m/e/css/plugins/jquery.ui.autocomplete.css');
-@import url('https://raw.githubusercontent.com/goddamn1234/siakadstyle/main/s/m/e/css/plugins/fullcalendar.css');
-@import url('https://raw.githubusercontent.com/goddamn1234/siakadstyle/main/s/m/e/css/plugins/colorbox.css');
-@import url('https://raw.githubusercontent.com/goddamn1234/siakadstyle/main/s/m/e/css/plugins/colorpicker.css');
-@import url('https://raw.githubusercontent.com/goddamn1234/siakadstyle/main/s/m/e/css/plugins/jquery.jgrowl.css');
-@import url('https://raw.githubusercontent.com/goddamn1234/siakadstyle/main/s/m/e/css/plugins/jquery.tagsinput.css');
-@import url('https://raw.githubusercontent.com/goddamn1234/siakadstyle/main/s/m/e/css/plugins/ui.spinner.css');
-@import url('https://raw.githubusercontent.com/goddamn1234/siakadstyle/main/s/m/e/css/plugins/ui.spinner.css');
-@import url('https://raw.githubusercontent.com/goddamn1234/siakadstyle/main/s/m/e/css/plugins/plugins.css');
+@import url('https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/main/s/m/e/css/plugins/jquery.alerts.css');
+@import url('https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/main/s/m/e/css/plugins/uniform.tp.css');
+@import url('https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/main/s/m/e/css/plugins/jquery.ui.css');
+@import url('https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/main/s/m/e/css/plugins/jquery.ui.autocomplete.css');
+@import url('https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/main/s/m/e/css/plugins/fullcalendar.css');
+@import url('https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/main/s/m/e/css/plugins/colorbox.css');
+@import url('https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/main/s/m/e/css/plugins/colorpicker.css');
+@import url('https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/main/s/m/e/css/plugins/jquery.jgrowl.css');
+@import url('https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/main/s/m/e/css/plugins/jquery.tagsinput.css');
+@import url('https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/main/s/m/e/css/plugins/ui.spinner.css');
+@import url('https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/main/s/m/e/css/plugins/ui.spinner.css');
+@import url('https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/main/s/m/e/css/plugins/plugins.css');
 
 
 /***** 1. RESET STYLE *****/
