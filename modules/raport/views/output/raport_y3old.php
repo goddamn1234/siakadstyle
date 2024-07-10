@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Save As PDF</title>
+    <style>
+        *{font-size: 10px;font-family: sans-serif}
+        sup{font-size:8px}
+        table{border-collapse: collapse; margin-bottom: 10px;}
+        table td{border-color: #000}
+        table.bold td, tr.bold td{font-weight: 700;}
+        table.main td{padding: 3px; color: #fff; background: #172742; border-color: #fff;}
+        table.list td{padding: 3px; word-wrap: break-word}
+        .rotate {-webkit-transform: rotate(-90deg);-moz-transform: rotate(-90deg);-ms-transform: rotate(-90deg);-o-transform: rotate(-90deg);filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);transform:rotate(-90deg);transform-origin: 50%;width: 20px;}
+    </style>
+</head>
+<body>
+	<table width="100%">
+		<tr>
+			<td align="center">
+				<img src="<?php echo 'image/logo-erudio-school-of-art.png'; ?>" alt="" width="200">
+				<h4><?php echo substr($raport_header->periode,0,3) == 'MID' ? 'MID TERM REPORT' : 'END TERM REPORT'; ?></h4>
+			</td>
+		</tr>
+	</table>
+	<table width="100%" class="bold">
+		<tr>
+			<td width="100px">Student's Name</td>
+			<td width="20px"> : </td>
+			<td width="300px"><?php echo $raport_header->full_name; ?></td>
+			<td>&nbsp;</td>
+			<td width="100px">Grade</td>
+			<td width="20px"> : </td>
+			<td width="70px">Year <?php echo $raport_header->tingkat; ?></td>
+		</tr>
+		<tr>
+			<td>Student's Number</td>
+			<td> : </td>
+			<td><?php echo $raport_header->id_number; ?></td>
+			<td>&nbsp;</td>
+			<td>Semester</td>
+			<td> : </td>
+			<td><?php echo $raport_header->periode; ?></td>
+		</tr>
+		<tr>
+			<td>Academic Year</td>
+			<td> : </td>
+			<td><?php echo $raport_header->tahun_akademik; ?></td>
+			<td colspan="4">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Batch</td>
+			<td> : </td>
+			<td><?php echo substr($raport_header->admission_date,0,4)- 2012 <= 0 ? 1 : substr($raport_header->admission_date,0,4)- 2012; ?></td>
+			<td colspan="4">&nbsp;</td>
+		</tr>
+	</table>
+	<table border="1" class="main">
+		<tr class="bold">
+			<td rowspan="3" align="center" style="border-top-color: #000; border-bottom-color: #000; border-left-color: #000; width: 3.5cm">SUBJECT</td>
+			<td rowspan="3" align="center" style="border-top-color: #000; border-bottom-color: #000; width: 2cm"><div class="rotate"><br><br><br><br>CRITERIA</div></td>
+			<td colspan="5" align="center" style="border-top-color: #000;">LEARNING CYCLE / ASSESMENT CIRCULAR</td>
+			<td rowspan="3" align="center" style="border-top-color: #000; border-bottom-color: #000; width: 2.1cm">RESULT</td>
+			<td rowspan="3" align="center" style="border-top-color: #000; border-bottom-color: #000; border-right-color: #000; width: 1.9cm">NOTES</td>
+		</tr>
+		<tr class="bold">
+			<td align="center" style="width: 3.2cm">DISCOVERY</td>
+			<td align="center" style="width: 3.2cm">EXPLORATION</td>
+			<td align="center" style="width: 3.2cm">PRESENTATION</td>
+			<td align="center" style="width: 3.2cm">PERSONALITY</td>
+			<td align="center" style="width: 3.2cm">ACHIEVEMENT</td>
+		</tr>
+		<tr>
+			<td style="font-size: 8px; border-bottom: #000;">Description:</td>
+			<td style="font-size: 8px; border-bottom: #000;">Description:</td>
+			<td style="font-size: 8px; border-bottom: #000;">Description:</td>
+			<td style="font-size: 8px; border-bottom: #000;">Description:</td>
+			<td style="font-size: 8px; border-bottom: #000;">Description:</td>
+		</tr>
+	</table>
+
+	<?php $batas = 6; $i=1; foreach($pmd as $key => $rl) { ?>
+	<table border="1" class="list" <?php if($batas > 30) { echo 'style="page-break-before: always;"'; $batas = 0; } ?>>
+		<?php foreach($learning as $ln) { $batas++; ?>
+		<tr>
+			<?php if($ln == 'pass') { ?>
+				<td rowspan="3" align="center" style="font-weight: 700; width: 0.5cm"><?php echo $i; ?></td>
+				<td rowspan="3" style="font-weight: 700; width: 2.8cm"><?php echo strtoupper($key); ?></td>
+			<?php } ?>
+			<td style="color: #fff; background: #172742; font-weight: 700; width: 2cm;"><?php echo strtoupper(substr($ln,0,1)).' ('.ucfirst($ln).')'; ?></td>
+			<?php foreach($category as $c) { ?>
+				<td valign="top" style="width: 2.4cm">
+					<?php echo isset($pmd[$key][$ln][$c]) && $pmd[$key][$ln][$c]->nama_pmd ? $pmd[$key][$ln][$c]->nama_pmd : '&nbsp;'; ?>
+				</td>
+				<td style="font-weight: 700; width: 0.6cm" align="center"><?php 
+					if(isset($pmd[$key][$ln][$c]) && $pmd[$key][$ln][$c]->pmd_result) {
+						echo $pmd[$key][$ln][$c]->pmd_result == 'Y' ? 'YES' : 'NO';
+					} else echo '&nbsp;'; ?></td>
+			<?php } ?>
+
+			<?php if($ln == 'pass') { ?>
+				<td rowspan="3" align="center" style="font-weight: 700; width: 2.1cm"><?php echo strtoupper($rl['result_pmd']); ?></td>
+				<td rowspan="3" align="center"><?php echo $rl['keterangan'] ? $rl['keterangan'] : '&nbsp;'; ?></td>
+			<?php } ?>
+		</tr>
+		<?php } ?>
+	</table>
+	<?php $i++; } ?>
+
+	<table border="1">
+		<tr class="bold">
+			<td align="center" style="width: 0.5cm; background: #172742; color: #fff; padding: 3px;border-color: #fff; border-left-color: #000;">NO</td>
+			<td align="center" style="width: 5.5cm; background: #172742; color: #fff; padding: 3px;border-color: #fff;">SUBJECT</td>
+			<td align="center" style="width: 2cm; background: #172742; color: #fff; padding: 3px;border-color: #fff;" align="center">SCORE</td>
+			<td align="center" style="width: 3cm; background: #172742; color: #fff; padding: 3px;border-color: #fff;">RESULT</td>
+			<td align="center" style="width: 15.3cm; background: #172742; color: #fff; padding: 3px;border-color: #fff; border-right-color: #000;">NOTES</td>
+		</tr>
+		<?php $jml = 0; foreach($raport_list as $r) { ?>
+		<tr>
+			<td align="center" style="padding: 3px;"><?php echo $i; ?></td>
+			<td style="padding: 3px;"><?php echo $r->nama_mapel; ?></td>
+			<td align="center" style="padding: 3px;"><?php echo $r->score; ?></td>
+			<td align="center" style="padding: 3px;">
+				<?php
+				//id 27 == FMP
+				echo $r->id_mapel == 27 ? strtoupper($r->result_fmp) : strtoupper($r->result); 
+				?>
+			</td>
+			<td style="padding: 3px;"><?php echo $r->keterangan; ?></td>
+		</tr>
+		<?php $i++; $jml += $r->score; } ?>
+		<tr class="bold">
+			<td align="center" style="width: 0.5cm; background: #ddd; padding: 3px;">&nbsp;</td>
+			<td align="center" style="width: 5.5cm; background: #ddd; padding: 3px; font-weight: 700;">AVERAGE</td>
+			<td align="center" style="width: 2cm; background: #ddd; padding: 3px; font-weight: 700;" align="center"><?php echo count($raport_list) ? number_format($jml / count($raport_list)) : '0'; ?></td>
+			<td align="center" style="width: 3cm; background: #ddd; padding: 3px; font-weight: 700;"><?php echo isset($raport_list[0]) ? strtoupper($raport_list[0]->result) : '&nbsp;'; ?></td>
+			<td align="center" style="width: 15.3cm; background: #ddd; padding: 3px;">&nbsp;</td>
+		</tr>
+	</table>
+
+
+	<table border="1">
+		<tr>
+			<td style="width: 26.2cm; padding: 0.5cm; min-height: 50px;">
+				<strong>Notes :</strong>
+				<div><?php echo $raport_header->keterangan_by_pr ? $raport_header->keterangan_by_pr : '-'; ?></div>
+			</td>
+		</tr>
+	</table>
+
+	<table>
+		<tr>
+		<td>Jakarta, <?php echo date('F jS Y'); ?>
+			
+			<div style="width: 200px; height: 120px; position: relative;">
+			<img id="image1" style="position: relative;" src="<?php echo $school_stamp; ?>" width="120px"  />
+			<img id="image2" style="position: absolute; top: 10px; left: 10px;" src="<?php echo $principal_signature; ?>" width="120px" />
+			<br/>
+			(<?php echo $principal_name; ?>)<br/><strong>PRINCIPAL</strong>
+			</div>
+			
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
