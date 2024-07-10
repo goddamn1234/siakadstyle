@@ -33,7 +33,7 @@ Searching 273 files for "<link rel="stylesheet" href="https://cdn.jsdelivr.net/g
    39  <!-- Datatables-->
    40: 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/js/datatables/jquery.dataTables.min.css">
    41  		<script src="https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/js/moment/moment.min.js"></script>
-   42          <script type='text/javascript' src="<?php echo base_url(); ?>assets/js/datatables/jquery.dataTables.min.js"></script>
+   42          <script src="https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/js/datatables/jquery.dataTables.min.js"></script>
 
 ~/Downloads/modules/admin/views/user.php:
    18  		
