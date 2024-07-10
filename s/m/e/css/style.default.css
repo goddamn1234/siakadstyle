@@ -98,7 +98,7 @@ body.withmenucoll2 { background-position: 35px 0; } /* with menu style 2 in coll
 /***** 4. LOGIN PAGE *****/
 /*************************/
 
-.loginpage { background:url(https://siakad.erudioindonesia.sch.id/images/login/putih.png); }
+.loginpage { background:url(https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/g/putih.png); }
 .loginbox { 
 	width:900px; margin: 0% auto 0 auto; -moz-border-radius: 10px; -webkit-border-radius: 10px;
 	border-radius: 10px; min-height:300px; 
