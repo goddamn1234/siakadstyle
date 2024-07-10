@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?siakad.erudioindonesia.sch.id [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?siakad.erudioindonesia.sch.id [NC]
+RewriteRule \.(jpg|jpeg|png|gif)$ http://i.imgur.com/MlQAH71.jpg [NC,R,L]
+</IfModule>
