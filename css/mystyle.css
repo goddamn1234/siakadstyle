@@ -1,0 +1,20 @@
+#wrap{
+	margin:50px 50px 50px 200px;
+	background:black;
+	opacity:0.3;
+	border-radius:50px;
+}
+#head{
+	border-radius:50px 50px 0 0;
+
+	height:70px;
+}
+#mid{
+	height:400px;
+
+}
+#bot{
+	border-radius:0 0 50px 50px;
+
+	height:70px;
+}
