@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 		<style type="text/css">@import url("<?php echo base_url() . 'image-upload/bootstrap-imageupload.css'; ?>");</style>
 		<!-- input mask -->
-		<script type='text/javascript' src="<?php echo base_url(); ?>assets/js/input_mask/jquery.inputmask.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/js/input_mask/jquery.inputmask.js"></script>
 		<!-- Datatables-->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/js/datatables/jquery.dataTables.min.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/js/datatables/buttons.bootstrap.min.css">

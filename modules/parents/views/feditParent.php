@@ -172,7 +172,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   </form>
             </div>
 <!-- input mask -->
-<script type='text/javascript' src="<?php echo base_url(); ?>assets/js/input_mask/jquery.inputmask.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/js/input_mask/jquery.inputmask.js"></script>
 
   <script type='text/javascript' src="<?php echo base_url(); ?>image-upload/bootstrap-imageupload.js"></script>
   <!-- Auto numeric -->
