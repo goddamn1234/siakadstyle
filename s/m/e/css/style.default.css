@@ -1,13 +1,11 @@
 /* Font face for Open Sans */
 @font-face {
     font-family: 'Open Sans';
-    src: url('https://raw.githubusercontent.com/goddamn1234/siakadstyle/main/fonts/OpenSans-Regular.ttf') format('truetype');
+    src: url('https://raw.githubusercontent.com/goddamn1234/siakadstyle/main//s/m/e/fonts/OpenSans-Regular.ttf') format('truetype');
     /* Add other font formats (e.g., woff, woff2) if needed */
     font-weight: normal;
     font-style: normal;
 }
-
-/* Imported CSS files */
 @import url('https://raw.githubusercontent.com/goddamn1234/siakadstyle/main/s/m/e/css/plugins/jquery.alerts.css');
 @import url('https://raw.githubusercontent.com/goddamn1234/siakadstyle/main/s/m/e/css/plugins/uniform.tp.css');
 @import url('https://raw.githubusercontent.com/goddamn1234/siakadstyle/main/s/m/e/css/plugins/jquery.ui.css');
@@ -20,7 +18,6 @@
 @import url('https://raw.githubusercontent.com/goddamn1234/siakadstyle/main/s/m/e/css/plugins/ui.spinner.css');
 @import url('https://raw.githubusercontent.com/goddamn1234/siakadstyle/main/s/m/e/css/plugins/ui.spinner.css');
 @import url('https://raw.githubusercontent.com/goddamn1234/siakadstyle/main/s/m/e/css/plugins/plugins.css');
-
 
 
 /***** 1. RESET STYLE *****/
