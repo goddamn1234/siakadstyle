@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- pace -->
         <script src="https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/js/pace/pace.min.js"></script>
 		<!-- Select 2 -->
-<script src="https://cdn.jsdelivr.net/gh/goddamn1234/siakadstyle/js/select/select2.full.js"></script>
+<script type='text/javascript' src="<?php echo base_url(); ?>assets/js/select/select2.full.js"></script>
         <script type="text/javascript">
 $(document).ready(function() {
 	$("#isi").load('ajaxAssign');
